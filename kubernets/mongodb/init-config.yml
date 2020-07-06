@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-initial
+  namespace: default
+data:
+  init-mongo.js: "db.createUser({ user : \"aie\", pwd : \"aie123\", roles : [ {   role : \"readWrite\",   db : \"sample\" } ]});"

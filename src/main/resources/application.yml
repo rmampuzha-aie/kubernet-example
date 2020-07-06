@@ -1,0 +1,14 @@
+logging:
+  level:
+    org:
+      springframework:
+        data: error
+spring:
+  data:
+    mongodb:
+      database: ${MONGO_DB:sample}
+      host: ${MONGO_HOST:localhost}
+      password: ${MONGO_PASSWORD:aie123}
+      port:  ${MONGO_PORT:27017}
+      username: ${MONGO_USERNAME:aie}
+      authentication-database: ${MONGO_AUTH_DB:sample}

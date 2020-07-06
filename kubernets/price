@@ -1,0 +1,22 @@
+{
+    id:1234_1004
+    modelid: 1234,
+    roleID: 1004,
+        prices: [
+            {
+                srp:24,
+                sale:
+                yourprice:
+                starttime:sds
+                wasprice:
+            },
+            {
+                srp:25,
+                sale:
+                yourprice:
+                starttime:sds
+            }
+        ]
+
+
+}

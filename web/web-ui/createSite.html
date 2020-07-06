@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Minimal JS front-end App Example</title>
+<script src="src/ctrl/initialize.js"></script>
+<script src="src/model/Site.js"></script>
+<script src="src/view/createSite.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+	window.addEventListener("load", si.view.createSite.setupUserInterface);
+</script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Site Ranking</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="listSites.html"><button class="btn btn-link" type="button">List
+							all sites</button></a></li>
+				<li class="active"><a href="createSite.html"><button type="button" class="btn btn-link">Add
+							a new site</button></a></li>
+				<li><a href="updateSite.html"><button type="button" class="btn btn-link">Update
+							a site</button></a></li>
+				<li><a href="deleteSite.html"><button type="button" class="btn btn-link">Delete
+							a site</button></a></li>
+				<li><a href="#"><button type="button" onclick="Site.clearData()" class="btn btn-link">Clear
+						database</button></a></li>
+				<li><a href="#"><button type="button" onclick="Site.createTestData()" class="btn btn-link">Create
+						test data</button></a></li>
+			</ul>
+		</div>
+	</nav>
+	<h1>Create a new site record</h1>
+	<div class="col-sm-4" style="background-color:rgb(200, 220, 181);">
+	<form id="Site">
+		<input name="id" hidden="true"/>
+		<div class="form-group">
+		
+			<label for="siteName">Site Name:</label>
+			<input name="siteName" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<label for="rating">Rating: </label><input name="rating" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<button type="button" name="commit">Save</button>
+		</div>
+	</form>
+
+	</div>
+<p></p>
+		<div class="col-sm-1" style="background-color:cornsilk">
+	<nav>
+		<a href="index.html">Back to main menu</a>
+	</nav>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: site-micro-service
+  name: site-micro-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: site-micro-service
+  template:
+    metadata:
+      labels:
+        app: site-micro-service
+    spec:
+      containers:
+      - image: kubernetes-example:1.0
+        name: site-micro-service
+        resources:
+          limits:
+            cpu: 1
+            memory: 1024Mi
+          requests:
+            cpu: 750m
+            memory: 768Mi
+        envFrom:
+         - secretRef:
+             name: site-secrets
+         - configMapRef:
+             name: site-config
+      restartPolicy: Always
+      
