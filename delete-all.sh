@@ -1,2 +1,3 @@
-kubectl delete -f kubernets/micro-service/
-kubectl delete -f kubernets/mongodb/
+kubectl delete -f web/kubernetes/
+kubectl delete -f kubernetes/micro-service/
+kubectl delete -f kubernetes/mongodb/
